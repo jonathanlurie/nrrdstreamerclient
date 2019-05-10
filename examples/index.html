@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Test</title>
+</head>
+<body>
+  <!-- importing the automatically build module -->
+  <script src="../dist/nrrdstreamerclient.js"></script>
+
+
+  <p>Open Javascript console.</p>
+
+  <script>
+
+    let filepath = 'http://127.0.0.1:8080/annotation_25_uncomp.nrrd'
+    var ns = new nrrdstreamerclient(filepath)
+
+    console.time('get header')
+    ns.getNrrdHeader(function(nrrdHeader){
+      console.timeEnd('get header')
+
+      console.time('stream')
+      ns.streamNrrdValue([2000, 4000, 4000],
+      function(payload){
+        console.timeEnd('stream')
+        console.log(payload)
+      })
+
+
+    })
+
+
+
+
+  </script>
+
+</body>
+</html>
