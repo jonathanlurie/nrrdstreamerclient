@@ -54,7 +54,8 @@ const NEW_LINE_CHAR = '\n'
  * - Add convenience method to bet volume boundaries in world space and voxel space
  * - make it compatible with multiband volume (ie. quaternion or vector NRRD) or time series (ie. fMRI)
  *
- *
+ * ---
+ * Constructor:
  */
 class NrrdStreamer {
 

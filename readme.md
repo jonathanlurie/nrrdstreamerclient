@@ -65,6 +65,10 @@ could be:
 -   Add convenience method to bet volume boundaries in world space and voxel space
 -   make it compatible with multiband volume (ie. quaternion or vector NRRD) or time series (ie. fMRI)
 
+* * *
+
+Constructor:
+
 ### Parameters
 
 -   `url`  
